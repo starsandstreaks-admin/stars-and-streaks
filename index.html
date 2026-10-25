@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stars &amp; Streaks Privacy Policy</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="How the Stars & Streaks chore app handles family and child information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  /* Layout: one readable column, a short "at a glance" panel up top, then the policy in plain sections */
+  :root {
+    --bg: #f6f9fd;
+    --surface: #ffffff;
+    --ink: #172033;
+    --muted: #4d5a70;
+    --line: #dbe4f0;
+    --accent: #2f7fe0;
+    --accent-ink: #1d5fb3;
+    --sun: #f5c842;
+    --sun-soft: #fff6d6;
+    --no: #b23a48;
+    --font-display: "Fredoka", "Avenir Next Rounded", "Arial Rounded MT Bold", system-ui, sans-serif;
+    --font-body: "Atkinson Hyperlegible", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1522; --surface: #172033; --ink: #e8eef8; --muted: #a7b3c7; --line: #28344b;
+      --accent: #6aa8f5; --accent-ink: #8dbcf7; --sun: #f5c842; --sun-soft: #2b2714; --no: #f08a96;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1522; --surface: #172033; --ink: #e8eef8; --muted: #a7b3c7; --line: #28344b;
+    --accent: #6aa8f5; --accent-ink: #8dbcf7; --sun: #f5c842; --sun-soft: #2b2714; --no: #f08a96;
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 2.5rem 4rem;
+  }
+  .page { max-width: 42rem; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem; }
+
+  header { display: flex; flex-direction: column; gap: 0.5rem; }
+  .app { display: flex; align-items: center; gap: 0.75rem; }
+  .badge {
+    width: 2.75rem; height: 2.75rem; border-radius: 0.8rem; flex: none;
+    background: var(--sun); display: grid; place-items: center;
+  }
+  .badge svg { width: 1.7rem; height: 1.7rem; }
+  .app-name { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; color: var(--muted); letter-spacing: 0.01em; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(2rem, 6vw, 2.6rem); line-height: 1.15; margin: 0; text-wrap: balance; }
+  .dates { color: var(--muted); font-size: 0.95rem; margin: 0; }
+
+  .glance {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 1rem;
+    padding: 1.25rem 1.25rem 1.1rem; display: flex; flex-direction: column; gap: 0.9rem;
+  }
+  .glance h2 { margin: 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-family: var(--font-body); font-weight: 700; }
+  .glance ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+  .glance li { display: grid; grid-template-columns: 1.4rem 1fr; gap: 0.5rem; align-items: start; }
+  .mark { font-weight: 700; text-align: center; }
+  .yes .mark { color: var(--accent); }
+  .no .mark { color: var(--no); }
+
+  section { display: flex; flex-direction: column; gap: 0.6rem; }
+  h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.45rem; line-height: 1.25; margin: 0; text-wrap: balance; }
+  h3 { font-size: 1.05rem; margin: 0.4rem 0 0; }
+  p { margin: 0; }
+  ul.list { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.35rem; }
+  .path { font-weight: 700; white-space: nowrap; }
+  a { color: var(--accent-ink); text-underline-offset: 2px; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 0.75rem; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; min-width: 30rem; font-size: 0.97rem; }
+  th, td { text-align: left; vertical-align: top; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--line); }
+  th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); }
+  tr:last-child td { border-bottom: 0; }
+
+  .note { background: var(--sun-soft); border-radius: 0.75rem; padding: 0.9rem 1rem; }
+  footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+</style>
+<style>
+  /* base reset for standalone hosting */
+  :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+</style>
+</head>
+<body>
+<main class="page">
+  <header>
+    <div class="app">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><polygon points="12,2.2 14.9,8.6 21.8,9.3 16.6,14 18.1,20.9 12,17.4 5.9,20.9 7.4,14 2.2,9.3 9.1,8.6" fill="#ffffff" stroke="#172033" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      </div>
+      <span class="app-name">Stars &amp; Streaks</span>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="dates">Effective 1 November 2026</p>
+  </header>
+
+  <p>Stars &amp; Streaks helps families run daily jobs and routines: children tick off jobs, earn stars and swap them for rewards that a grown-up sets. This policy explains what information the app keeps, where it goes, and how to delete it. It is written for the parents and carers who set the app up.</p>
+
+  <div class="glance" aria-labelledby="glance-title">
+    <h2 id="glance-title">At a glance</h2>
+    <ul>
+      <li class="yes"><span class="mark" aria-hidden="true">✓</span><span>Everything is kept on your device. A cloud backup is optional and only starts if a grown-up signs in.</span></li>
+      <li class="yes"><span class="mark" aria-hidden="true">✓</span><span>We store your children's first names and their jobs, stars and rewards.</span></li>
+      <li class="no"><span class="mark" aria-hidden="true">✕</span><span>No photos, no camera or microphone, no location and no contacts.</span></li>
+      <li class="no"><span class="mark" aria-hidden="true">✕</span><span>No advertising, no analytics, no tracking, and we never sell information.</span></li>
+      <li class="yes"><span class="mark" aria-hidden="true">✓</span><span>You can delete your cloud account and backups from inside the app at any time.</span></li>
+    </ul>
+  </div>
+
+  <section aria-labelledby="s-device">
+    <h2 id="s-device">Information kept on your device</h2>
+    <p>The app stores its information on the phone or tablet it runs on. This includes each child's first name and how to say it, the look, voice, alarm sound and picture icon they chose from the app's built-in set, their jobs and routines, stars, streaks, rewards and the rewards they have bought, and your reminder times and grown-up PIN. This stays on the device unless you turn on the cloud backup, and it is removed when you delete the app.</p>
+  </section>
+
+  <section aria-labelledby="s-cloud">
+    <h2 id="s-cloud">Optional cloud backup and job sync</h2>
+    <p>A grown-up can sign in with an email address and password to back up the family's information and keep jobs in step across the family's devices. When you do, we store:</p>
+    <ul class="list">
+      <li>your email address and a securely hashed password (we never see the password itself);</li>
+      <li>for each child: their first name and how to say it, their chosen look, voice, alarm sound and icon, and their jobs, stars, streaks, rewards and purchases (your grown-up PIN and reminder times stay on the device);</li>
+      <li>if job sync is on, a notification token and a random device ID for each child's device, so that device can be alerted when a grown-up adds a job "just for today".</li>
+    </ul>
+    <p>We use this only to back up and restore your family's information, to sync jobs between your own devices, and to send you the alerts you turned on.</p>
+  </section>
+
+  <section aria-labelledby="s-notify">
+    <h2 id="s-notify">Reminders, alarms and notifications</h2>
+    <p>Routine reminders, alarms and the job timer are set up on the device itself using Apple's notification and alarm features. When job sync is on and a grown-up adds a job "just for today", the child's device gets an alert delivered by Expo's push notification service; the alert includes the child's first name and the names of the new jobs.</p>
+  </section>
+
+  <section aria-labelledby="s-not">
+    <h2 id="s-not">What we don't collect</h2>
+    <ul class="list">
+      <li>Photos. The app never takes or stores photos.</li>
+      <li>Camera or microphone. The app doesn't ask for either. Spoken prompts are made on the device by Apple's built-in voices; nothing is recorded.</li>
+      <li>Location, contacts, health information or browsing history.</li>
+      <li>Analytics, advertising identifiers or tracking across other apps and websites.</li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="s-share">
+    <h2 id="s-share">Who handles your information</h2>
+    <p>We don't sell or rent information, and we don't share it for advertising. Two service providers handle it on our behalf, only to run the app's features:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">Provider</th><th scope="col">What it does</th><th scope="col">What it receives</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://supabase.com/privacy">Supabase</a></td><td>Hosts the cloud backup and the grown-up's sign-in</td><td>Email address, hashed password, the family's backed-up information, notification tokens</td></tr>
+          <tr><td><a href="https://expo.dev/privacy">Expo</a></td><td>Delivers alerts about jobs added "just for today"</td><td>Notification tokens, the child's first name and job names in the alert</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>These providers may store information on servers outside Australia. We may also disclose information if the law requires it.</p>
+  </section>
+
+  <section aria-labelledby="s-kids">
+    <h2 id="s-kids">Children</h2>
+    <p>Stars &amp; Streaks is used by children, but it is set up and controlled by a parent or carer. Children don't create accounts or enter an email address. The only information about a child is what a grown-up enters: a first name and the family's jobs and rewards. A website a grown-up adds to a job needs the grown-up PIN before it opens; the app's built-in buttons for learning apps (such as Duolingo, Khan Academy, Seesaw and Mathletics) open those apps or their sites directly.</p>
+  </section>
+
+  <section aria-labelledby="s-delete">
+    <h2 id="s-delete">Keeping and deleting information</h2>
+    <p>Cloud information is kept until you delete it. You can:</p>
+    <ul class="list">
+      <li>delete your account and every child's cloud backup in <span class="path">Grown-ups → Cloud Backup → Delete my account and cloud data</span>;</li>
+      <li>remove one child's cloud copy with <span class="path">Family View → Remove</span>;</li>
+      <li>remove everything on a device by deleting the app.</li>
+    </ul>
+    <p>Deleting your account removes it and its cloud data, including notification tokens, straight away. Expo may keep short-lived delivery records for alerts it has already sent, under <a href="https://expo.dev/privacy">its own privacy policy</a>. Information still on your devices stays there until you delete the app.</p>
+  </section>
+
+  <section aria-labelledby="s-security">
+    <h2 id="s-security">Security</h2>
+    <p>Information sent to the cloud travels over encrypted connections. Each signed-in account can only reach its own family's information. No system is perfectly secure, so please use a strong password and keep your grown-up PIN private.</p>
+  </section>
+
+  <section aria-labelledby="s-rights">
+    <h2 id="s-rights">Your choices and rights</h2>
+    <p>You can see and change your family's information in the app at any time, sign out, or delete your account. To ask about your information or make a complaint, contact us below. If you are not satisfied with our answer, you can contact the <a href="https://www.oaic.gov.au/">Office of the Australian Information Commissioner</a>.</p>
+  </section>
+
+  <section aria-labelledby="s-changes">
+    <h2 id="s-changes">Changes to this policy</h2>
+    <p>If the way the app handles information changes, we will update this page and its effective date.</p>
+  </section>
+
+  <section aria-labelledby="s-contact">
+    <h2 id="s-contact">Contact</h2>
+    <p>Stars &amp; Streaks is made by Tamara Travers, an independent developer in Australia.</p>
+    <p class="note">Email: <a href="mailto:starsandstreaks@gmail.com">starsandstreaks@gmail.com</a></p>
+  </section>
+
+  <footer>Stars &amp; Streaks · Privacy Policy · Effective 1 November 2026</footer>
+</main>
+</body>
+</html>
