@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stars &amp; Streaks Terms</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="The terms for using the Stars & Streaks family routine app and its subscription.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<style>
+  /* Layout: one readable column, a short "at a glance" panel up top, then the policy in plain sections */
+  :root {
+    --bg: #f6f9fd;
+    --surface: #ffffff;
+    --ink: #172033;
+    --muted: #4d5a70;
+    --line: #dbe4f0;
+    --accent: #2f7fe0;
+    --accent-ink: #1d5fb3;
+    --sun: #f5c842;
+    --sun-soft: #fff6d6;
+    --no: #b23a48;
+    --font-display: "Fredoka", "Avenir Next Rounded", "Arial Rounded MT Bold", system-ui, sans-serif;
+    --font-body: "Atkinson Hyperlegible", -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1522; --surface: #172033; --ink: #e8eef8; --muted: #a7b3c7; --line: #28344b;
+      --accent: #6aa8f5; --accent-ink: #8dbcf7; --sun: #f5c842; --sun-soft: #2b2714; --no: #f08a96;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1522; --surface: #172033; --ink: #e8eef8; --muted: #a7b3c7; --line: #28344b;
+    --accent: #6aa8f5; --accent-ink: #8dbcf7; --sun: #f5c842; --sun-soft: #2b2714; --no: #f08a96;
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 2.5rem 4rem;
+  }
+  .page { max-width: 42rem; margin: 0 auto; display: flex; flex-direction: column; gap: 2rem; }
+
+  header { display: flex; flex-direction: column; gap: 0.5rem; }
+  .app { display: flex; align-items: center; gap: 0.75rem; }
+  .badge {
+    width: 2.75rem; height: 2.75rem; border-radius: 0.8rem; flex: none;
+    background: var(--sun); display: grid; place-items: center;
+  }
+  .badge svg { width: 1.7rem; height: 1.7rem; }
+  .app-name { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; color: var(--muted); letter-spacing: 0.01em; }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(2rem, 6vw, 2.6rem); line-height: 1.15; margin: 0; text-wrap: balance; }
+  .dates { color: var(--muted); font-size: 0.95rem; margin: 0; }
+
+  .glance {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 1rem;
+    padding: 1.25rem 1.25rem 1.1rem; display: flex; flex-direction: column; gap: 0.9rem;
+  }
+  .glance h2 { margin: 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-family: var(--font-body); font-weight: 700; }
+  .glance ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.6rem; }
+  .glance li { display: grid; grid-template-columns: 1.4rem 1fr; gap: 0.5rem; align-items: start; }
+  .mark { font-weight: 700; text-align: center; }
+  .yes .mark { color: var(--accent); }
+  .no .mark { color: var(--no); }
+
+  section { display: flex; flex-direction: column; gap: 0.6rem; }
+  h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.45rem; line-height: 1.25; margin: 0; text-wrap: balance; }
+  h3 { font-size: 1.05rem; margin: 0.4rem 0 0; }
+  p { margin: 0; }
+  ul.list { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.35rem; }
+  .path { font-weight: 700; white-space: nowrap; }
+  a { color: var(--accent-ink); text-underline-offset: 2px; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 0.75rem; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; min-width: 30rem; font-size: 0.97rem; }
+  th, td { text-align: left; vertical-align: top; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--line); }
+  th { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); }
+  tr:last-child td { border-bottom: 0; }
+
+  .note { background: var(--sun-soft); border-radius: 0.75rem; padding: 0.9rem 1rem; }
+  footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+</style>
+<style>
+  /* base reset for standalone hosting */
+  :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; }
+  img { max-width: 100%; }
+</style>
+</head>
+<body>
+<main class="page">
+  <header>
+    <div class="app">
+      <div class="badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><polygon points="12,2.2 14.9,8.6 21.8,9.3 16.6,14 18.1,20.9 12,17.4 5.9,20.9 7.4,14 2.2,9.3 9.1,8.6" fill="#ffffff" stroke="#172033" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      </div>
+      <span class="app-name">Stars &amp; Streaks</span>
+    </div>
+    <h1>Terms of Use</h1>
+    <p class="dates">Effective 10 November 2026</p>
+  </header>
+
+  <p>These terms apply when you download or use the Stars &amp; Streaks app. They are written for the parents and carers who set the app up. By using the app you agree to them. If you don't agree, please don't use the app.</p>
+
+  <div class="glance" aria-labelledby="glance-title">
+    <h2 id="glance-title">At a glance</h2>
+    <ul>
+      <li class="yes"><span class="mark" aria-hidden="true">✓</span><span>A yearly subscription, with a 7-day free trial for new subscribers.</span></li>
+      <li class="yes"><span class="mark" aria-hidden="true">✓</span><span>Payment, renewal, cancellation and refunds are handled by the App Store or Google Play.</span></li>
+      <li class="yes"><span class="mark" aria-hidden="true">✓</span><span>A grown-up sets up and supervises the app. Children don't create accounts.</span></li>
+      <li class="yes"><span class="mark" aria-hidden="true">✓</span><span>Your rights under the Australian Consumer Law are not affected.</span></li>
+    </ul>
+  </div>
+
+  <section aria-labelledby="s-who">
+    <h2 id="s-who">Who we are</h2>
+    <p>Stars &amp; Streaks is provided by Tamara Travers, trading as Wild Otter Industries, in Queensland, Australia ("we", "us"). You can contact us at the email address at the end of these terms.</p>
+  </section>
+
+  <section aria-labelledby="s-use">
+    <h2 id="s-use">Using the app</h2>
+    <p>Stars &amp; Streaks helps families run daily jobs and routines with reminders, alarms, stars and rewards. A parent or carer must set the app up, choose the grown-up PIN and supervise how children use it. You are responsible for the jobs, rewards, times and links you add, and for keeping your PIN and any cloud account password private.</p>
+    <p>Reminders and alarms rely on your device's settings, such as notifications, sound, battery saving and Focus or Do Not Disturb. Please don't rely on the app as the only reminder for anything important, such as medicine or safety.</p>
+  </section>
+
+  <section aria-labelledby="s-sub">
+    <h2 id="s-sub">Subscription, free trial and payment</h2>
+    <ul class="list">
+      <li>The app's features need an active yearly subscription. New subscribers can start with a 7-day free trial.</li>
+      <li>You buy and pay for the subscription through Apple's App Store or Google Play, under their terms. The price is shown before you confirm.</li>
+      <li>When the free trial ends, you are charged for a year unless you cancel before the trial ends.</li>
+      <li>The subscription renews automatically each year unless you cancel it before the renewal date. On iPhone and iPad, cancel at least 24 hours before the end of the current period.</li>
+      <li>You can manage or cancel at any time in your Apple account settings or in Google Play under Payments &amp; subscriptions, or from Grown-ups &rarr; Subscription in the app. Cancelling stops the next renewal; you keep access until the end of the period you've paid for.</li>
+      <li>Refund requests are handled by Apple or Google under their refund policies.</li>
+      <li>Where Apple's Family Sharing or Google Play's family features allow it, a subscription can be shared with your family group.</li>
+    </ul>
+    <p>If we change the price, the App Store or Google Play will tell you before it applies to your renewal, as their rules require.</p>
+  </section>
+
+  <section aria-labelledby="s-cloud">
+    <h2 id="s-cloud">Optional cloud backup</h2>
+    <p>A grown-up can create a cloud account with an email address and password to back up the family's information and sync jobs between devices. You can delete the account and its cloud data at any time from Grown-ups &rarr; Cloud Backup in the app. Our <a href="./">Privacy Policy</a> explains what is stored and how it is handled.</p>
+  </section>
+
+  <section aria-labelledby="s-ok">
+    <h2 id="s-ok">Fair use</h2>
+    <p>Please don't copy, resell or reverse engineer the app, try to get into other families' information, or use the app in a way that breaks the law or harms the service. Links you add to jobs open other apps and websites, which have their own terms; we aren't responsible for them.</p>
+  </section>
+
+  <section aria-labelledby="s-acl">
+    <h2 id="s-acl">Your consumer rights</h2>
+    <p>Our services come with guarantees that cannot be excluded under the Australian Consumer Law. Nothing in these terms limits those rights. Apart from those rights, and as far as the law allows, the app is provided as it is and as available. We work to keep it reliable but can't promise it will always be free of errors or interruptions, and we aren't liable for indirect losses.</p>
+  </section>
+
+  <section aria-labelledby="s-end">
+    <h2 id="s-end">Changes and ending</h2>
+    <p>We may update the app and these terms. If we make an important change, we will update this page and its date, and tell you in the app where appropriate. You can stop using the app at any time by cancelling your subscription and deleting the app.</p>
+  </section>
+
+  <section aria-labelledby="s-law">
+    <h2 id="s-law">Law</h2>
+    <p>These terms are governed by the laws of Queensland, Australia.</p>
+  </section>
+
+  <section aria-labelledby="s-contact">
+    <h2 id="s-contact">Contact</h2>
+    <p class="note">Email: <a href="mailto:wildotterindustries@gmail.com">wildotterindustries@gmail.com</a></p>
+  </section>
+
+  <footer>Stars &amp; Streaks · Terms of Use · Effective 10 November 2026 · <a href="./">Privacy Policy</a></footer>
+</main>
+</body>
+</html>
